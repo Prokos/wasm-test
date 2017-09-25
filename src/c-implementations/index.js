@@ -1,5 +1,5 @@
 /**
- * Implementations of C libraries
+ * Implementations of the C libraries used by WASM modules
  * Should all start with an underscore
  */
 

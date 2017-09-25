@@ -1,13 +1,20 @@
 # WASM test
 
-Project for testing WASM scripts and build process
+Project for testing WASM scripts and build process.
+
+Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 
 ## Structure
 
 `c/` contains C scripts that will be compiled to WASM
+
 `src/` contains Javascript source
+
 `static/` contains static files (html etc)
+
 `wasm/` will contain WASM scripts after running `yarn watch`
+
+`dist/` will contain final build after running `yarn watch`
 
 ## Todo
 
