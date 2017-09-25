@@ -1,0 +1,26 @@
+{
+  "name": "wasm-test",
+  "version": "0.0.0",
+  "main": "src/bootstrap.js",
+  "license": "MIT",
+  "scripts": {
+    "cleanup": "rm -rf dist wasm",
+    "server": "node server.js",
+    "watch": "npm run cleanup && npm-run-all --parallel server watch:*",
+    "watch:c": "./compile-c.sh",
+    "watch:webpack": "webpack --watch",
+    "watch:static": "cpx 'static/*' dist -w"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "compression": "^1.7.0",
+    "cpx": "^1.5.0",
+    "express": "^4.15.4",
+    "npm-run-all": "^4.1.1",
+    "webpack": "^3.6.0",
+    "wasm-loader": "^1.1.0"
+  }
+}
