@@ -1,6 +1,8 @@
-export default {
+export const memory = {
 	memoryBase: 0,
 	tableBase: 0,
 	memory: new WebAssembly.Memory({ initial: 256 }),
 	table: new WebAssembly.Table({ initial: 0, element: 'anyfunc'}),
 };
+
+export const heapU8 = new Uint8Array(memory.memory.buffer);

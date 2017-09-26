@@ -7,4 +7,5 @@ import _printf from './printf';
 
 export default {
 	_printf,
+	_puts: _printf,
 };
