@@ -20,7 +20,7 @@ Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 
 ## Todo
 
-1. Figure out and document what UTF8ArrayToString and pointerToString do exactly #computerscience
+1. Figure out why emscripten's 'pointerToString' implementation is so complicated
 1. Make sure `compile-c.sh` re-runs on changing of files in `c/`
 1. Make sure `compile-c.sh` compiles any and all files in `c/`
 1. Actually do something useful with WASM instead of just adding integers together :D

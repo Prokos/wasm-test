@@ -1,7 +1,7 @@
 #include <emscripten/emscripten.h>
 
 int main() {
-	printf("WebAssembly Module Loaded\n");
+	printf("WebAssembly Module Loaded");
 }
 
 int addInts(int a, int b) {
