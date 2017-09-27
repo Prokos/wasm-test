@@ -1,6 +1,6 @@
 import wasmJs from 'wasm-js/index';
 
-import wasmModule from 'wasm/app.wasm';
+import loadWebAssemblyModule from 'wasm/app.wasm';
 
 export const memory = new WebAssembly.Memory({ initial: 256 });
 export const table = new WebAssembly.Table({ initial: 0, element: 'anyfunc' });
@@ -8,15 +8,17 @@ export const table = new WebAssembly.Table({ initial: 0, element: 'anyfunc' });
 export const heapU8 = new Uint8Array(memory.buffer);
 
 export default () => {
-	wasmModule({ env: { 
-		memoryBase: 0,
-		memory,
+	loadWebAssemblyModule({ 
+		env: { 
+			memoryBase: 0,
+			memory,
 
-		tableBase: 0,
-		table,
+			tableBase: 0,
+			table,
 
-		...wasmJs,
-	}})
+			...wasmJs,
+		},
+	})
 	.then(module =>  {
 		const exports = module.instance.exports;
 
