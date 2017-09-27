@@ -1,6 +1,6 @@
-import cppImplementations from 'c-implementations/index';
+import wasmJs from 'wasm-js/index';
 
-import wasmModule from 'wasm/addInts.wasm';
+import wasmModule from 'wasm/app.wasm';
 
 export const memory = new WebAssembly.Memory({ initial: 256 });
 export const table = new WebAssembly.Table({ initial: 0, element: 'anyfunc' });
@@ -15,13 +15,19 @@ export default () => {
 		tableBase: 0,
 		table,
 
-		...cppImplementations,
+		...wasmJs,
 	}})
-	.then(module => module.instance.exports)
-	.then(wasm => {
-		wasm._main();
+	.then(module =>  {
+		const exports = module.instance.exports;
 
-		console.info('Addition result: ', wasm._addInts(500, 837));		
-		console.info('Addition result: ', wasm._addInts(19, 31));		
+		// Initialise 
+		exports._main();
+
+		// Start up game loop
+		const animate = () => {
+			exports._animate();
+			requestAnimationFrame(animate);
+		};
+		requestAnimationFrame(animate);
 	});
-}
+};

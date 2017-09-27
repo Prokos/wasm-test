@@ -1,4 +1,4 @@
-import pointerToString from 'c-implementations/utils/pointerToString';
+import pointerToString from 'wasm-js/utils/pointerToString';
 
 export default pointer => {
 	const string = pointerToString(pointer);

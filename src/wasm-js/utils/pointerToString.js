@@ -1,5 +1,6 @@
 import { heapU8 } from 'app';
-import UTF8ArrayToString from 'c-implementations/utils/UTF8ArrayToString';
+
+import UTF8ArrayToString from 'wasm-js/utils/UTF8ArrayToString';
 
 /**
  * pointerToString
