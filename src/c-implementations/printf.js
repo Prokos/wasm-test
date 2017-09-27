@@ -1,4 +1,4 @@
-import pointerToString from './utils/pointerToString';
+import pointerToString from 'c-implementations/utils/pointerToString';
 
 export default pointer => {
 	const string = pointerToString(pointer);

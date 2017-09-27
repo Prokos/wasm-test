@@ -5,5 +5,5 @@ export const memory = {
 	table: new WebAssembly.Table({ initial: 0, element: 'anyfunc'}),
 };
 
-// Bytes in WASM are 8-bit, so we need a Uint8Array in order to access our memory addresses
+// Bytes are 8 bits, so we need a Uint8Array in order to access our memory addresses
 export const heapU8 = new Uint8Array(memory.memory.buffer);

@@ -24,6 +24,9 @@ const config = {
 		path: `${__dirname}/dist/scripts`,
 		filename: '[name].min.js',
 	},
+	resolve: {
+		modules: [`${__dirname}/src`, 'node_modules', `${__dirname}`],
+	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin()
 	],

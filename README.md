@@ -6,6 +6,8 @@ An attempt to make WASM work with the minimum amount of dependencies and file-si
 
 Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 
+**NOTE:** This repository is used for personal learning purposes. You should probably just use emscripten's optimised implementations.
+
 ## Structure
 
 `c/` contains C scripts that will be compiled to WASM
@@ -20,7 +22,7 @@ Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 
 ## Todo
 
-1. Figure out why emscripten's 'pointerToString' implementation is so complicated
+1. Write an unoptimised but readable UTF8ArrayToString implementation -- for learnings
 1. Make sure `compile-c.sh` re-runs on changing of files in `c/`
 1. Make sure `compile-c.sh` compiles any and all files in `c/`
 1. Actually do something useful with WASM instead of just adding integers together :D

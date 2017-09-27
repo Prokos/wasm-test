@@ -1,7 +1,7 @@
-import { memory } from './wasm-memory';
-import cppImplementations from './c-implementations/index';
+import { memory } from 'wasm-memory';
+import cppImplementations from 'c-implementations/index';
 
-import wasmModule from './../wasm/addInts.wasm';
+import wasmModule from 'wasm/addInts.wasm';
 
 export default () => {
 	wasmModule({ env: { ...memory, ...cppImplementations }})

@@ -3,7 +3,7 @@
  * Should all start with an underscore
  */
 
-import _printf from './printf';
+import _printf from 'c-implementations/printf';
 
 export default {
 	_printf,
