@@ -1,4 +1,4 @@
-import { heapU8 } from 'wasm-memory';
+import { heapU8 } from 'app';
 import UTF8ArrayToString from 'c-implementations/utils/UTF8ArrayToString';
 
 /**

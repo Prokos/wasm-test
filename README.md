@@ -26,5 +26,4 @@ Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 1. Make sure `compile-c.sh` re-runs on changing of files in `c/`
 1. Make sure `compile-c.sh` compiles any and all files in `c/`
 1. Actually do something useful with WASM instead of just adding integers together :D
-1. Add documentation for every part of the code
-1. Fine-tune `config/wasm-memory.js` and investigate impact of configurations
+1. Fine-tune memory and investigate impact of configurations
