@@ -1,3 +1,5 @@
+import * as PIXI from 'pixi.js';
+
 import wasmJs from 'wasm-js/index';
 
 import loadWebAssemblyModule from 'wasm/app.wasm';
@@ -16,13 +18,18 @@ export default () => {
 			tableBase: 0,
 			table,
 
-			...wasmJs,
+			// Pass through all JS methods that will be called from this module
+			...wasmJs, 
 		},
 	})
 	.then(module =>  {
 		const exports = module.instance.exports;
 
-		// Initialise 
+		// Initialise PIXI
+		const pixiApp = new PIXI.Application();
+		document.body.appendChild(pixiApp.view);
+
+		// Initialise app
 		exports._main();
 
 		// Start up game loop

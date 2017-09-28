@@ -23,7 +23,6 @@ Run `yarn watch` and open browser in `http://localhost:1337` to run app.
 ## Todo
 
 1. Write an unoptimised but readable UTF8ArrayToString implementation -- for learnings
-1. Make sure `compile-c.sh` re-runs on changing of files in `c/`
-1. Make sure `compile-c.sh` compiles any and all files in `c/`
 1. Actually do something useful with WASM instead of just adding integers together :D
 1. Fine-tune memory and investigate impact of configurations
+1. Potentially optimise watch order

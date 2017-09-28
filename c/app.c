@@ -1,9 +1,9 @@
-#include "wasm-js.h"
+#include "wasm_js.h"
 
 int main() {
 	printf("WebAssembly Module Loaded - привет мир");
 }
 
-int animate() {
+void animate() {
 	js_moveBox(5, 0);
 }
